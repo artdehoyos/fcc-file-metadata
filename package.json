@@ -1,0 +1,25 @@
+{
+  "name": "fcc-file-metadata",
+  "version": "1.0.0",
+  "description": "Reads data from a selected file and displays the file size",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artdehoyos/fcc-file-metadata.git"
+  },
+  "author": "Art deHoyos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artdehoyos/fcc-file-metadata/issues"
+  },
+  "homepage": "https://github.com/artdehoyos/fcc-file-metadata#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "multer": "^1.1.0"
+  },
+  "devDependencies": {}
+}

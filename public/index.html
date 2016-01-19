@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fcc-file-metadata</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>fcc-file-metadata</h1>
+    <p>Analyzes a selected file and returns the file size</p>
+    <form enctype="multipart/form-data" id="fileUploader" name="fileUploader">
+        <input type="file" name="file"/>
+        <input type="submit" value="Submit"/>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#fileUploader").submit(function(event){
+               event.preventDefault();
+               event.stopPropagation();
+               var data = new FormData(this);
+               $.ajax({
+                   url: document.URL + "api",
+                   data: data,
+                   processData: false,
+                   contentType: false,
+                   type: "POST",
+                   success: function(response){
+                        alert("File Size: " + response + " bytes");
+                    }
+               });
+           });
+        });
+    </script>
+</body>
+</html>
